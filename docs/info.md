@@ -9,7 +9,13 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Takes two four bit words and performs a desired operation on them.
+0 = addition
+1 = subtraction
+2 = bitwise AND
+3 = division
+4 = bitwise OR
+5 = multiplication
 
 ## How to test
 
