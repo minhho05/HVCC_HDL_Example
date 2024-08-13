@@ -27,9 +27,9 @@ module tt_um_minhho05 (
     reg [7:0] result;
     assign uo_out = result;
 
-    assign uio_out == 0;
+    assign uio_out = 0;
 
-    assign uio_oe == 0;
+    assign uio_oe = 0;
 
     always @(posedge clk) begin
       case (ALUop)
