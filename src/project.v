@@ -15,11 +15,11 @@ module tt_um_minhho05 (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
-    reg [3:0] a;
-    assign a = ui_in [7:4];
+    reg [7:0] a;
+    assign a = {4'b0000, ui_in [7:4]};
     
-    reg [3:0] b;
-    assign b = ui_in [3:0];
+    reg [7:0] b;
+    assign b = {4'b0000, ui_in [3:0]};
     
     reg [2:0] ALUop;
     assign ALUop = uio_in [2:0];
@@ -35,9 +35,10 @@ module tt_um_minhho05 (
         3'b100: result <= a | b;
         3'b101: result <= a * b;
         3'b011: result <= a / b;
+        default: result <= 8'b0;
       endcase
     end
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, rst_n, uio_out};
+  wire _unused = &{ena, rst_n, uio_in[7:3], uio_out};
 
 endmodule

@@ -19,7 +19,7 @@ Takes two four bit words and performs a desired operation on them.
 
 ## How to test
 
-Explain how to use your project
+.
 
 ## External hardware
 
